@@ -55,7 +55,9 @@ public final class AdminDtos {
 
     public record SubjectRequest(@NotBlank @Size(max = 150) String name,
                                  @Size(max = 30) String code,
-                                 @Size(max = 2000) String description) {}
+                                 @Size(max = 2000) String description,
+                                 String teacherId,
+                                 List<String> groupIds) {}
 
     public record SubjectWithAssignments(Subject subject, List<TeachingAssignment> assignments) {}
 

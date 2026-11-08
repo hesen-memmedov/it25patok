@@ -290,6 +290,36 @@ public class AdminService {
 
     // ------------------------------------------------------------------ subjects
 
+    private void syncSubjectTeachers(String subjectId, AdminDtos.SubjectRequest request) {
+        String teacherId = request.teacherId() == null ? null : request.teacherId().trim();
+        List<String> groupIds = request.groupIds() == null ? null : request.groupIds().stream()
+                .filter(value -> value != null && !value.isBlank())
+                .map(value -> value.trim())
+                .distinct()
+                .toList();
+        // Müəllim seçilməyibsə, mövcud təyinatlar dəyişməz
+        if (Text.isBlank(teacherId)) return;
+        if (groupIds == null || groupIds.isEmpty()) {
+            throw ApiException.badRequest("INVALID_GROUPS",
+                    "Müəllim təyin edilibsə, dərsin keçildiyi qruplar seçilməlidir.");
+        }
+        User teacher = requireUser(teacherId);
+        if (teacher.role() != Role.TEACHER) {
+            throw ApiException.badRequest("NOT_TEACHER", "Seçilmiş istifadəçi müəllim deyil.");
+        }
+        for (String groupId : groupIds) {
+            if (groups.findById(groupId) == null) {
+                throw ApiException.badRequest("GROUP_NOT_FOUND", "Qrup tapılmadı: " + groupId);
+            }
+        }
+        subjects.deleteTeachingAssignmentsBySubject(subjectId);
+        for (String groupId : groupIds) {
+            subjects.createTeachingAssignment(teacherId, subjectId, groupId);
+        }
+        audit.log("TEACHING_REPLACED", "SUBJECT", subjectId,
+                Map.of("teacherId", teacherId, "groups", groupIds));
+    }
+
     public List<AdminDtos.SubjectWithAssignments> listSubjects() {
         return subjects.findAll().stream()
                 .map(subject -> new AdminDtos.SubjectWithAssignments(subject,
@@ -304,6 +334,7 @@ public class AdminService {
             throw ApiException.conflict("SUBJECT_CODE_EXISTS", "Bu fənn kodu artıq istifadə olunur.");
         }
         Subject subject = subjects.insert(name, code, Text.clean(request.description(), 2000));
+        syncSubjectTeachers(subject.id(), request);
         audit.log("SUBJECT_CREATED", "SUBJECT", subject.id(), Map.of("name", name));
         return subject;
     }
@@ -317,6 +348,7 @@ public class AdminService {
         }
         subjects.update(id, Text.clean(request.name(), 150), code,
                 Text.clean(request.description(), 2000));
+        syncSubjectTeachers(id, request);
         audit.log("SUBJECT_UPDATED", "SUBJECT", id);
         return subjects.findById(id);
     }
@@ -330,6 +362,7 @@ public class AdminService {
             throw ApiException.conflict("SUBJECT_IN_USE",
                     "Bu fənnə bağlı tapşırıqlar var. Əvvəlcə onları arxivləşdirin və ya silin.");
         }
+        subjects.deleteTeachingAssignmentsBySubject(id);
         subjects.delete(id);
         audit.log("SUBJECT_DELETED", "SUBJECT", id, Map.of("name", existing.name()));
     }

@@ -38,7 +38,7 @@ import type {
 
 const schema = z.object({
   type: z.enum(['SERBEST_ISH', 'KOLLOKVIUM', 'LABORATORIYA']),
-  subjectId: z.string().min(1, 'Fənn seçin'),
+  subjectId: z.string().min(1, 'Sizə təyin edilmiş fənn yoxdur'),
   title: z.string().trim().min(2, 'Başlıq ən azı 2 simvol olmalıdır').max(200, 'Başlıq 200 simvoldan çox ola bilməz'),
   description: z.string().optional(),
   deadline: z.string().optional(),
@@ -73,6 +73,9 @@ export default function TeacherAssignmentFormPage() {
     queryKey: ['teacher-subjects'],
     queryFn: () => getData<TeacherSubject[]>('/teacher/subjects'),
   })
+  const teacherSubjects = subjects.data ?? []
+  const singleSubject = teacherSubjects.length === 1 ? teacherSubjects[0].subject : null
+  const hasSubjects = teacherSubjects.length > 0
 
   const detail = useQuery({
     queryKey: ['teacher-assignment', id],
@@ -246,9 +249,16 @@ export default function TeacherAssignmentFormPage() {
           {isEdit ? 'Mövzunu redaktə et' : 'Yeni mövzu paylaş'}
         </h1>
         <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-          Tip, fənn və qrupları seçin, başlıq və təsvir əlavə edin, deadline təyin edin.
+          Tipi seçin, başlıq və təsvir əlavə edin, deadline təyin edin. Fənn sizin təyin edilmiş fənninizdir.
         </p>
       </div>
+
+      {!hasSubjects && !subjects.isLoading && (
+        <Alert tone="warning" title="Sizə təyin edilmiş fənn yoxdur">
+          Tapşırıq paylaşmamaq üçün əvvəlcə admin fənni yaradıb sizi həmin fənnə müəllim təyin etməlidir.
+          Admin panelindəki Fənlər bölməsindən müraciət edin.
+        </Alert>
+      )}
 
       <form onSubmit={handleSubmit((values) => saveMutation.mutate(values))} noValidate>
         <div className="space-y-5">
@@ -280,31 +290,40 @@ export default function TeacherAssignmentFormPage() {
               </Field>
 
               <div className="grid gap-4 sm:grid-cols-2">
-                <Field label="Fənn" htmlFor="subjectId" error={errors.subjectId?.message} required>
-                  <Controller
-                    name="subjectId"
-                    control={control}
-                    render={({ field }) => (
-                      <Select
-                        id="subjectId"
-                        value={field.value}
-                        invalid={Boolean(errors.subjectId)}
-                        onChange={(event) => {
-                          field.onChange(event)
-                          const groups = subjects.data?.find((item) => item.subject.id === event.target.value)?.groups ?? []
-                          setValue('groupIds', groups.map((group) => group.id), { shouldValidate: true })
-                        }}
-                      >
-                        <option value="">Fənn seçin</option>
-                        {(subjects.data ?? []).map((item) => (
-                          <option key={item.subject.id} value={item.subject.id}>
-                            {item.subject.name}
-                          </option>
-                        ))}
-                      </Select>
-                    )}
-                  />
-                </Field>
+                {singleSubject ? (
+                  <Field label="Fənn">
+                    <div className="flex h-[42px] items-center gap-2 rounded-xl border border-primary-200 bg-primary-50/50 px-3 text-sm font-semibold text-primary-700 dark:border-primary-400/30 dark:bg-primary-500/10 dark:text-primary-200">
+                      <BookOpen className="h-4 w-4 shrink-0" />
+                      {singleSubject.name}
+                    </div>
+                  </Field>
+                ) : (
+                  <Field label="Fənn" htmlFor="subjectId" error={errors.subjectId?.message} required>
+                    <Controller
+                      name="subjectId"
+                      control={control}
+                      render={({ field }) => (
+                        <Select
+                          id="subjectId"
+                          value={field.value}
+                          invalid={Boolean(errors.subjectId)}
+                          onChange={(event) => {
+                            field.onChange(event)
+                            const groups = subjects.data?.find((item) => item.subject.id === event.target.value)?.groups ?? []
+                            setValue('groupIds', groups.map((group) => group.id), { shouldValidate: true })
+                          }}
+                        >
+                          <option value="">Fənn seçin</option>
+                          {(subjects.data ?? []).map((item) => (
+                            <option key={item.subject.id} value={item.subject.id}>
+                              {item.subject.name}
+                            </option>
+                          ))}
+                        </Select>
+                      )}
+                    />
+                  </Field>
+                )}
 
                 <Field label="Başlıq" htmlFor="title" error={errors.title?.message} required>
                   <Input
@@ -355,7 +374,11 @@ export default function TeacherAssignmentFormPage() {
                     )
                   })}
                   {!availableGroups.length && (
-                    <p className="text-xs text-slate-400">Fənn seçdikdən sonra qruplar görünəcək.</p>
+                    <p className="text-xs text-slate-400">
+                      {singleSubject
+                        ? 'Bu fənnə bağlı qrup təyin edilməyib. Admin fənni təyin etməlidir.'
+                        : 'Fənn seçdikdən sonra qruplar görünəcək.'}
+                    </p>
                   )}
                 </div>
               </Field>
@@ -477,7 +500,7 @@ export default function TeacherAssignmentFormPage() {
             >
               Ləğv et
             </Button>
-            <Button type="submit" loading={saveMutation.isPending} leftIcon={<Save className="h-4 w-4" />}>
+            <Button type="submit" loading={saveMutation.isPending} leftIcon={<Save className="h-4 w-4" />} disabled={!hasSubjects || subjects.isLoading}>
               {isEdit ? 'Dəyişiklikləri saxla' : 'Mövzunu yarat'}
             </Button>
           </div>

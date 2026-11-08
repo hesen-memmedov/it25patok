@@ -155,6 +155,10 @@ public class SubjectRepository {
         d1.update("DELETE FROM teaching_assignments WHERE teacher_id = ?", teacherId);
     }
 
+    public void deleteTeachingAssignmentsBySubject(String subjectId) {
+        d1.update("DELETE FROM teaching_assignments WHERE subject_id = ?", subjectId);
+    }
+
     public List<String> groupIdsForTeacher(String teacherId) {
         return d1.query("SELECT DISTINCT group_id FROM teaching_assignments WHERE teacher_id = ?", teacherId)
                 .stream().map(r -> Db.str(r, "group_id")).toList();
