@@ -26,9 +26,17 @@ services:
         value: 49b97986-913b-4042-8c9f-5d74251d5713
       - key: CF_API_TOKEN
         sync: false
-      # --- Mail: Brevo HTTPS API (Render blocks SMTP ports 25/465/587), free 300/gün ---
-      - key: BREVO_API_KEY
+      # --- Mail: EmailJS vasitəsilə OTP (server 403 verir, ona görə HTTPS REST) ---
+      - key: APP_EMAILJS_SERVICE_ID
+        value: service_g289288
+      - key: APP_EMAILJS_TEMPLATE_ID
+        value: template_yr6rqmr
+      - key: APP_EMAILJS_PUBLIC_KEY
+        value: LPW0gWO_VJX-RGl0h
+      - key: APP_EMAILJS_PRIVATE_KEY
         sync: false
+      - key: APP_EMAILJS_WEBSITE
+        value: https://it25patok.pages.dev
       - key: MAIL_USERNAME
         value: it25patok@gmail.com
       - key: MAIL_DEV_MODE
