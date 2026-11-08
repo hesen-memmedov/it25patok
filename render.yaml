@@ -1,0 +1,56 @@
+# Render Blueprint — İT25 PATOK backend (pulsuz plan)
+# Deploy: render.com → New → Blueprint → bu repo seçilir → Environment-da dəyərləri doldurun.
+services:
+  - type: web
+    name: it25patok-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    region: frankfurt
+    healthCheckPath: /actuator/health
+    envVars:
+      # --- Gücləndirmə açarları (mütləq doldurun) ---
+      - key: JWT_SECRET
+        sync: false
+      - key: CHAT_ENCRYPTION_KEY
+        sync: false
+      - key: CHAT_KEY_VERSION
+        value: "1"
+      # --- Cloudflare D1 (existing database) ---
+      - key: D1_MODE
+        value: cloudflare
+      - key: CF_ACCOUNT_ID
+        value: 4500709af9b63c246ff54a75c636df05
+      - key: CF_D1_DATABASE_ID
+        value: 49b97986-913b-4042-8c9f-5d74251d5713
+      - key: CF_API_TOKEN
+        sync: false
+      # --- Mail: Brevo HTTPS API (Render blocks SMTP ports 25/465/587), free 300/gün ---
+      - key: BREVO_API_KEY
+        sync: false
+      - key: MAIL_USERNAME
+        value: it25patok@gmail.com
+      - key: MAIL_DEV_MODE
+        value: "false"
+      # --- Storage: local (Render free disk — restartda təmizlənir) ---
+      - key: STORAGE_MODE
+        value: local
+      - key: LOCAL_STORAGE_ROOT
+        value: /app/.data/files
+      # --- Admin seed (ilk girişdə parol dəyişmə məcburi) ---
+      - key: ADMIN_EMAIL
+        value: admin@it25patok.az
+      - key: ADMIN_INITIAL_PASSWORD
+        value: Admin123!IT25
+      # --- CORS / cookies ---
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://it25patok.pages.dev
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: COOKIE_SAME_SITE
+        value: None
+      - key: APP_BASE_URL
+        value: https://it25patok.pages.dev
+      - key: JAVA_OPTS
+        value: -Xmx256m

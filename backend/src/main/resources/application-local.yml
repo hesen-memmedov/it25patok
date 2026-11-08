@@ -1,0 +1,30 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+app:
+  base-url: http://localhost:5173
+  cors:
+    allowed-origins: http://localhost:5173,http://127.0.0.1:5173,http://localhost:4173,http://127.0.0.1:4173,http://localhost:8081,https://it25patok.pages.dev,https://*.it25patok.pages.dev
+    cookie-secure: false
+    cookie-same-site: Lax
+  d1:
+    mode: local
+  storage:
+    mode: local
+  # Lokal mühit — test üçün OTP limitləri demək olar ki söndürülüb.
+  # Production (base application.yml) sərt qalır.
+  otp:
+    ttl-minutes: 5
+    max-attempts: 100
+    resend-cooldown-seconds: 0
+    max-per-hour: 10000
+    block-minutes: 15
+  mail:
+    dev-mode: true
+  admin:
+    email: ${ADMIN_EMAIL:admin@it25patok.az}
+    initial-password: ${ADMIN_INITIAL_PASSWORD:Admin123!IT25}
+logging:
+  level:
+    az.it25patok: DEBUG

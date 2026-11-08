@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+p-lock/
+
+# Production builds
+dist/
+build/
+
+# Environment variables
+.env.local
+
+# TypeScript
+*.tsbuildinfo
+*.tscheck
+
+# Backend
+backend/.data/
+backend/target/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.lock
+
+# PWA
+public/it25patok-logo-*.png
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example

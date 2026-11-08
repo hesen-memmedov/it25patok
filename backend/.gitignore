@@ -1,0 +1,13 @@
+# Dependencies
+*.jar
+target/
+
+# Database
+*.data/
+
+# Environment
+.env*
+
+# IDE
+.idea/
+*.iml

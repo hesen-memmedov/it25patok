@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <text x="256" y="262" font-family="'DejaVu Sans',sans-serif" font-weight="800" font-size="215" fill="#ffffff" text-anchor="middle">IT</text>
+  <rect x="151" y="297" width="210" height="107" rx="27" fill="rgba(255,255,255,0.93)"/>
+  <text x="256" y="376" font-family="'DejaVu Sans',sans-serif" font-weight="800" font-size="80" fill="#4f46e5" text-anchor="middle">25</text>
+</svg>

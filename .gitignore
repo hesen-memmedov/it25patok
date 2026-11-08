@@ -1,0 +1,28 @@
+# Dependencies & build artifacts
+node_modules/
+dist/
+target/
+
+# Runtime / local data
+.data/
+*.db
+*.sqlite
+
+# Wrangler / Cloudflare
+.wrangler/
+
+# Environment files (real secrets never committed)
+.env
+.env.local
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+*.iml

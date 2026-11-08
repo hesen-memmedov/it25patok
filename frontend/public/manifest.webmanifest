@@ -1,0 +1,32 @@
+{
+  "name": "IT25 PATOK",
+  "short_name": "IT25 PATOK",
+  "description": "İT25 PATOK Platformu",
+  "theme_color": "#1e1b4b",
+  "background_color": "#0f0f23",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/it25patok-logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/it25patok-logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/it25patok-logo-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/it25patok-logo-167.png",
+      "sizes": "167x167",
+      "type": "image/png"
+    }
+  ]
+}

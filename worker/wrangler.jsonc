@@ -1,0 +1,45 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "it25patok-api",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-07",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  "containers": [
+    {
+      "class_name": "ApiContainer",
+      "scheduling_policy": "durable_object",
+      "images": {
+        "base": {
+          "dockerfile": "../backend/Dockerfile"
+        }
+      }
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "API_CONTAINER",
+        "class_name": "ApiContainer"
+      }
+    ]
+  },
+  "exports": {
+    "ApiContainer": {
+      "type": "durable-object",
+      "storage": "sqlite"
+    }
+  },
+  "vars": {
+    "CF_ACCOUNT_ID": "4500709af9b63c246ff54a75c636df05",
+    "CF_D1_DATABASE_ID": "49b97986-913b-4042-8c9f-5d74251d5713",
+    "ADMIN_EMAIL": "admin@it25patok.az",
+    "ADMIN_INITIAL_PASSWORD": "Admin123!IT25",
+    "APP_EMAILJS_SERVICE_ID": "service_g289288",
+    "APP_EMAILJS_TEMPLATE_ID": "template_yr6rqmr",
+    "APP_EMAILJS_PUBLIC_KEY": "LPW0gWO_VJX-RGl0h"
+  },
+  "upload_source_maps": true
+}

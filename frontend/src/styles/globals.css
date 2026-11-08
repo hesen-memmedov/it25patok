@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased dark:bg-[#0b1020] dark:text-slate-100;
+    font-feature-settings: 'cv11', 'ss01';
+    min-height: 100dvh;
+  }
+
+  ::selection {
+    @apply bg-primary/25 text-slate-900 dark:text-white;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-slate-50 dark:ring-offset-[#0b1020];
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(148 163 184 / 0.5) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(148 163 184 / 0.45);
+    border-radius: 999px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  input[type='datetime-local']::-webkit-calendar-picker-indicator {
+    @apply cursor-pointer opacity-60;
+  }
+}
+
+@layer components {
+  .surface {
+    @apply rounded-2xl border border-slate-200/80 bg-white shadow-sm dark:border-white/10 dark:bg-white/[0.045];
+  }
+
+  .glass {
+    @apply border border-white/60 bg-white/75 backdrop-blur-xl dark:border-white/10 dark:bg-[#0b1020]/80;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 via-violet-600 to-primary-500 bg-clip-text text-transparent dark:from-primary-300 dark:via-violet-300 dark:to-primary-200;
+  }
+
+  .gradient-bg {
+    background-image: linear-gradient(135deg, #6366f1 0%, #8b5cf6 55%, #a855f7 100%);
+  }
+
+  .page-container {
+    @apply mx-auto w-full max-w-[1400px] px-4 pb-28 pt-6 sm:px-6 lg:px-8 lg:pb-10 lg:pt-8;
+  }
+
+  .table-wrap {
+    @apply overflow-x-auto rounded-2xl border border-slate-200/80 dark:border-white/10;
+  }
+
+  .table {
+    @apply min-w-full divide-y divide-slate-200 text-sm dark:divide-white/10;
+  }
+
+  .table thead {
+    @apply bg-slate-50/80 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:bg-white/[0.04] dark:text-slate-400;
+  }
+
+  .table th {
+    @apply whitespace-nowrap px-4 py-3;
+  }
+
+  .table td {
+    @apply px-4 py-3 align-middle;
+  }
+
+  .table tbody {
+    @apply divide-y divide-slate-100 dark:divide-white/[0.07];
+  }
+
+  .table tbody tr {
+    @apply bg-white transition-colors hover:bg-slate-50/70 dark:bg-transparent dark:hover:bg-white/[0.035];
+  }
+
+  .rich-text {
+    @apply text-[15px] leading-7 text-slate-700 dark:text-slate-300;
+  }
+
+  .rich-text h1 {
+    @apply mb-3 mt-6 font-display text-2xl font-bold text-slate-900 dark:text-white;
+  }
+
+  .rich-text h2 {
+    @apply mb-2 mt-5 font-display text-xl font-bold text-slate-900 dark:text-white;
+  }
+
+  .rich-text h3 {
+    @apply mb-2 mt-4 text-lg font-semibold text-slate-900 dark:text-white;
+  }
+
+  .rich-text p {
+    @apply my-2;
+  }
+
+  .rich-text ul {
+    @apply my-2 list-disc space-y-1 pl-6;
+  }
+
+  .rich-text ol {
+    @apply my-2 list-decimal space-y-1 pl-6;
+  }
+
+  .rich-text a {
+    @apply font-medium text-primary-600 underline decoration-primary-300 underline-offset-2 hover:text-primary-700 dark:text-primary-300;
+  }
+
+  .rich-text blockquote {
+    @apply my-3 border-l-4 border-primary-300 pl-4 italic text-slate-600 dark:border-primary-500 dark:text-slate-400;
+  }
+
+  .rich-text code {
+    @apply rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[13px] text-primary-700 dark:bg-white/10 dark:text-primary-200;
+  }
+
+  .rich-text pre {
+    @apply my-3 overflow-x-auto rounded-xl bg-slate-900 p-4 text-sm text-slate-100;
+  }
+
+  .rich-text img {
+    @apply max-w-full rounded-xl;
+  }
+
+  .rich-text strong {
+    @apply font-semibold text-slate-900 dark:text-white;
+  }
+
+  .rich-text hr {
+    @apply my-5 border-slate-200 dark:border-white/10;
+  }
+
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tiptap {
+    @apply min-h-[180px] px-4 py-3 text-[15px] leading-7 text-slate-700 focus:outline-none dark:text-slate-200;
+  }
+
+  .tiptap p.is-editor-empty:first-child::before {
+    @apply pointer-events-none float-left h-0 text-slate-400;
+    content: attr(data-placeholder);
+  }
+
+  .tiptap h1 {
+    @apply my-3 text-2xl font-bold text-slate-900 dark:text-white;
+  }
+
+  .tiptap h2 {
+    @apply my-2 text-xl font-bold text-slate-900 dark:text-white;
+  }
+
+  .tiptap ul {
+    @apply my-2 list-disc pl-6;
+  }
+
+  .tiptap ol {
+    @apply my-2 list-decimal pl-6;
+  }
+
+  .tiptap blockquote {
+    @apply my-2 border-l-4 border-primary-300 pl-4 italic;
+  }
+
+  .tiptap code {
+    @apply rounded bg-slate-100 px-1 py-0.5 font-mono text-sm dark:bg-white/10;
+  }
+
+  .tiptap pre {
+    @apply overflow-x-auto rounded-xl bg-slate-900 p-4 text-sm text-slate-100;
+  }
+
+  .skeleton {
+    @apply animate-shimmer rounded-lg bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-[length:500px_100%] dark:from-white/10 dark:via-white/[0.06] dark:to-white/10;
+  }
+}
+
+@layer utilities {
+  .pb-safe {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
+  }
+
+  .mb-safe-nav {
+    margin-bottom: calc(env(safe-area-inset-bottom, 0px) + 4.75rem);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+#root {
+  min-height: 100dvh;
+}
