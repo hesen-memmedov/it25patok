@@ -86,7 +86,7 @@ export default function StudentMissingPage() {
         <div className="space-y-4">
           {query.data.map((group) => (
             <Card key={group.subjectId} className="overflow-hidden">
-              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 px-5 py-4 dark:border-white/10">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#e5dfb4] px-5 py-4 dark:border-white/10">
                 <div className="flex items-center gap-2.5">
                   <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-50 text-primary-600 dark:bg-primary-500/15 dark:text-primary-300">
                     <BookOpen className="h-4 w-4" />
@@ -104,14 +104,14 @@ export default function StudentMissingPage() {
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
-              <ul className="divide-y divide-slate-100 dark:divide-white/[0.06]">
+              <ul className="divide-y divide-[#e5dfb4] dark:divide-white/[0.06]">
                 {group.items.map((item) => {
                   const isLate = item.daysLate > 0
                   return (
                     <li key={item.assignmentId}>
                       <Link
                         to={`/student/assignments/${item.assignmentId}`}
-                        className="flex flex-wrap items-center gap-3 px-5 py-3.5 transition hover:bg-slate-50 dark:hover:bg-white/[0.035]"
+                        className="flex flex-wrap items-center gap-3 px-5 py-3.5 transition hover:bg-[#efeada] dark:hover:bg-white/[0.035]"
                       >
                         <span
                           className={cn(

@@ -34,7 +34,7 @@ export function CardBody({ className, ...rest }: HTMLAttributes<HTMLDivElement>)
 export function CardFooter({ className, ...rest }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn('flex flex-wrap items-center justify-end gap-2 border-t border-slate-100 px-5 py-3.5 dark:border-white/10', className)}
+      className={cn('flex flex-wrap items-center justify-end gap-2 border-t border-[#e5dfb4] px-5 py-3.5 dark:border-white/10', className)}
       {...rest}
     />
   )

@@ -248,7 +248,7 @@ export default function StudentDashboardPage() {
 
         <aside className="min-w-0 space-y-6">
           <Card className="overflow-hidden">
-            <div className="flex items-center justify-between gap-2 border-b border-slate-100 px-5 py-4 dark:border-white/10">
+            <div className="flex items-center justify-between gap-2 border-b border-[#e5dfb4] px-5 py-4 dark:border-white/10">
               <div>
                 <h2 className="font-display text-base font-bold text-slate-900 dark:text-white">Borclarım</h2>
                 <p className="text-xs text-slate-500 dark:text-slate-400">Təhvil verilməmiş işlər</p>
@@ -268,12 +268,12 @@ export default function StudentDashboardPage() {
                 ))}
               </div>
             ) : data?.missingItems.length ? (
-              <ul className="divide-y divide-slate-100 dark:divide-white/[0.06]">
+              <ul className="divide-y divide-[#e5dfb4] dark:divide-white/[0.06]">
                 {data.missingItems.slice(0, 6).map((item) => (
                   <li key={item.assignmentId}>
                     <Link
                       to={`/student/assignments/${item.assignmentId}`}
-                      className="flex items-center gap-3 px-5 py-3 transition hover:bg-slate-50 dark:hover:bg-white/[0.035]"
+                      className="flex items-center gap-3 px-5 py-3 transition hover:bg-[#efeada] dark:hover:bg-white/[0.035]"
                     >
                       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300">
                         <ClipboardList className="h-4 w-4" />
@@ -302,7 +302,7 @@ export default function StudentDashboardPage() {
               />
             )}
             {data && data.missingItems.length > 6 && (
-              <div className="border-t border-slate-100 px-5 py-3 dark:border-white/10">
+              <div className="border-t border-[#e5dfb4] px-5 py-3 dark:border-white/10">
                 <Link to="/student/missing" className="text-xs font-semibold text-primary-600 hover:underline dark:text-primary-300">
                   Daha {data.missingItems.length - 6} borc
                 </Link>

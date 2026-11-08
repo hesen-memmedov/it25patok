@@ -77,7 +77,7 @@ export default function AdminFilesPage() {
               setPage(1)
             }}
             className={cn(
-              'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+              'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
               'text-sm',
             )}
           />
@@ -89,7 +89,7 @@ export default function AdminFilesPage() {
             value={kindFilter || ''}
             onChange={(e) => setKindFilter(e.target.value)}
             className={cn(
-              'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+              'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
               'text-sm',
             )}
           />
@@ -134,7 +134,7 @@ export default function AdminFilesPage() {
             </thead>
             <tbody>
               {files?.map((f, _idx) => (
-                <tr key={f.id} className={cn('bg-white dark:bg-black/30', 'dark:bg-black/30', 'border-b', 'border-slate-200 dark:border-white/10')}>
+                <tr key={f.id} className={cn('bg-white dark:bg-black/30', 'dark:bg-black/30', 'border-b', 'border-[#ddd6a8] dark:border-white/10')}>
                   <td className="text-xs text-slate-600 dark:text-slate-300 line-clamp-1">
                     {f.originalName}
                   </td>

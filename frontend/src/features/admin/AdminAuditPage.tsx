@@ -75,7 +75,7 @@ export default function AdminAuditPage() {
               setPage(1)
             }}
             className={cn(
-              'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+              'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
               'text-sm',
             )}
           />
@@ -109,7 +109,7 @@ export default function AdminAuditPage() {
             </thead>
             <tbody>
               {auditRows?.map((row, _idx) => (
-                <tr key={row.id} className={cn('bg-white dark:bg-black/30', 'dark:bg-black/30', 'border-b', 'border-slate-200 dark:border-white/10')}>
+                <tr key={row.id} className={cn('bg-white dark:bg-black/30', 'dark:bg-black/30', 'border-b', 'border-[#ddd6a8] dark:border-white/10')}>
                   <td className="text-xs text-slate-600 dark:text-slate-300">
                     {new Date(row.created_at).toLocaleString('az-AZ')}
                   </td>

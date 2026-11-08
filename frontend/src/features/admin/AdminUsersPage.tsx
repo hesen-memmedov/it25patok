@@ -273,7 +273,7 @@ export default function AdminUsersPage() {
               setActiveFilter(e.target.checked)
               setPage(1)
             }}
-            className="w-4 h-4 rounded border border-slate-300 dark:border-white/20"
+            className="w-4 h-4 rounded border border-[#cfc799] dark:border-white/20"
             aria-label={t('admin.active_only')}
           />
           <span className="text-sm text-slate-600 dark:text-slate-300">{t('admin.active_only')}</span>
@@ -303,7 +303,7 @@ export default function AdminUsersPage() {
             </thead>
             <tbody>
               {users?.map((u) => (
-                <tr key={u.id} className="bg-white dark:bg-black/30 dark:bg-black/30 border-b border-slate-200 dark:border-white/10">
+                <tr key={u.id} className="bg-white dark:bg-black/30 dark:bg-black/30 border-b border-[#ddd6a8] dark:border-white/10">
                   <td className="text-xs text-slate-600 dark:text-slate-300">{u.id.substring(0, 8)}…</td>
                   <td className="text-xs text-slate-600 dark:text-slate-300">{u.username ?? '—'}</td>
                   <td className="text-xs text-slate-600 dark:text-slate-300">

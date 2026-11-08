@@ -279,7 +279,7 @@ export default function TeacherAssignmentFormPage() {
                           'flex min-h-[52px] items-center justify-center rounded-xl border px-3 text-sm font-semibold transition',
                           active
                             ? 'border-primary-400 bg-primary-50 text-primary-700 ring-2 ring-primary-500/15 dark:border-primary-400/50 dark:bg-primary-500/15 dark:text-primary-200'
-                            : 'border-slate-200 bg-white text-slate-600 hover:border-primary-200 hover:bg-slate-50 dark:border-white/10 dark:bg-white/[0.03] dark:text-slate-300 dark:hover:border-white/20',
+                            : 'border-[#ddd6a8] bg-white text-slate-600 hover:border-primary-200 hover:bg-[#efeada] dark:border-white/10 dark:bg-white/[0.03] dark:text-slate-300 dark:hover:border-white/20',
                         )}
                       >
                         {assignmentTypeLabel(option.value)}
@@ -363,7 +363,7 @@ export default function TeacherAssignmentFormPage() {
                           'inline-flex min-h-[44px] items-center gap-2 rounded-xl border px-3.5 text-sm font-semibold transition',
                           active
                             ? 'border-primary-400 bg-primary-50 text-primary-700 dark:border-primary-400/50 dark:bg-primary-500/15 dark:text-primary-200'
-                            : 'border-slate-200 bg-white text-slate-600 hover:border-primary-200 dark:border-white/10 dark:bg-white/[0.03] dark:text-slate-300',
+                            : 'border-[#ddd6a8] bg-white text-slate-600 hover:border-primary-200 dark:border-white/10 dark:bg-white/[0.03] dark:text-slate-300',
                         )}
                         aria-pressed={active}
                       >
@@ -427,7 +427,7 @@ export default function TeacherAssignmentFormPage() {
                 />
               </Field>
             </div>
-            <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50/60 p-3.5 dark:border-white/10 dark:bg-white/[0.025]">
+            <div className="mt-4 rounded-xl border border-[#ddd6a8] bg-[#efeada]/60 p-3.5 dark:border-white/10 dark:bg-white/[0.025]">
               <Controller
                 name="allowLate"
                 control={control}

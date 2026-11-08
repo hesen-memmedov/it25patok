@@ -94,7 +94,7 @@ export function AssignmentCard({
         </p>
       </div>
 
-      <div className="mt-auto flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 pt-3 dark:border-white/[0.07]">
+      <div className="mt-auto flex flex-wrap items-center justify-between gap-2 border-t border-[#e5dfb4] pt-3 dark:border-white/[0.07]">
         <DeadlineLine deadline={assignment.deadline} />
         <div className="flex items-center gap-2.5 text-[11px] text-slate-400">
           {assignment.attachmentCount > 0 && (
@@ -147,7 +147,7 @@ export function TeacherAssignmentCard({
           {assignment.submittedCount} təhvil
         </span>
       </div>
-      <div className="mt-auto border-t border-slate-100 pt-3 dark:border-white/[0.07]">
+      <div className="mt-auto border-t border-[#e5dfb4] pt-3 dark:border-white/[0.07]">
         <DeadlineLine deadline={assignment.deadline} />
       </div>
     </Link>

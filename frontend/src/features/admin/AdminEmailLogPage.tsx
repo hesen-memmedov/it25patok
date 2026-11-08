@@ -77,7 +77,7 @@ export default function AdminEmailLogPage() {
             </thead>
             <tbody>
               {emailRows?.map((row, _idx) => (
-                <tr key={row.id} className={cn('bg-white dark:bg-black/30', 'dark:bg-black/30', 'border-b', 'border-slate-200 dark:border-white/10')}>
+                <tr key={row.id} className={cn('bg-white dark:bg-black/30', 'dark:bg-black/30', 'border-b', 'border-[#ddd6a8] dark:border-white/10')}>
                   <td className="text-xs text-slate-600 dark:text-slate-300">
                     {new Date(row.sent_at).toLocaleString('az-AZ')}
                   </td>

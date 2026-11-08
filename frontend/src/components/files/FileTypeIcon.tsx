@@ -21,8 +21,8 @@ const mapping: Record<string, { icon: LucideIcon; tone: string }> = {
   sheet: { icon: FileSpreadsheet, tone: 'bg-emerald-100 text-emerald-600 dark:bg-emerald-500/15 dark:text-emerald-300' },
   slides: { icon: Presentation, tone: 'bg-orange-100 text-orange-600 dark:bg-orange-500/15 dark:text-orange-300' },
   archive: { icon: FileArchive, tone: 'bg-yellow-100 text-yellow-700 dark:bg-yellow-500/15 dark:text-yellow-300' },
-  text: { icon: FileCode2, tone: 'bg-slate-100 text-slate-600 dark:bg-white/10 dark:text-slate-300' },
-  other: { icon: File, tone: 'bg-slate-100 text-slate-600 dark:bg-white/10 dark:text-slate-300' },
+  text: { icon: FileCode2, tone: 'bg-[#e8e4c8] text-slate-600 dark:bg-white/10 dark:text-slate-300' },
+  other: { icon: File, tone: 'bg-[#e8e4c8] text-slate-600 dark:bg-white/10 dark:text-slate-300' },
 }
 
 function fileIconMeta(extension: string | null | undefined, mimeType?: string | null) {

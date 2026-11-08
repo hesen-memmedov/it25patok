@@ -9,11 +9,11 @@ const variants: Record<ButtonVariant, string> = {
   primary:
     'bg-gradient-to-r from-primary-600 to-violet-600 text-white shadow-soft hover:from-primary-500 hover:to-violet-500 active:scale-[0.985]',
   secondary:
-    'bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100',
+    'bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-[#e8e4c8]',
   outline:
-    'border border-slate-300 bg-white text-slate-700 hover:border-primary-300 hover:bg-primary-50 hover:text-primary-700 dark:border-white/15 dark:bg-white/5 dark:text-slate-200 dark:hover:border-primary-400/40 dark:hover:bg-primary-500/10 dark:hover:text-primary-200',
+    'border border-[#cfc799] bg-white text-slate-700 hover:border-primary-300 hover:bg-primary-50 hover:text-primary-700 dark:border-white/15 dark:bg-white/5 dark:text-slate-200 dark:hover:border-primary-400/40 dark:hover:bg-primary-500/10 dark:hover:text-primary-200',
   ghost:
-    'text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white',
+    'text-slate-600 hover:bg-[#e8e4c8] hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white',
   danger:
     'bg-rose-600 text-white shadow-sm hover:bg-rose-500 active:scale-[0.985]',
   success:

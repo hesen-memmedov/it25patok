@@ -276,7 +276,7 @@ export default function TeacherAssignmentPage() {
       </Link>
 
       <Card className="overflow-hidden">
-        <div className="border-b border-slate-100 bg-gradient-to-r from-primary-50/60 via-white to-violet-50/40 px-5 py-5 dark:border-white/10 dark:from-primary-500/[0.07] dark:via-transparent dark:to-violet-500/[0.05] sm:px-6">
+        <div className="border-b border-[#e5dfb4] bg-gradient-to-r from-primary-50/60 via-white to-violet-50/40 px-5 py-5 dark:border-white/10 dark:from-primary-500/[0.07] dark:via-transparent dark:to-violet-500/[0.05] sm:px-6">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div className="min-w-0">
               <div className="mb-2 flex flex-wrap items-center gap-2">
@@ -337,7 +337,7 @@ export default function TeacherAssignmentPage() {
           <RichText html={assignment.description} />
         </div>
 
-        <div className="border-t border-slate-100 px-5 py-5 dark:border-white/10 sm:px-6">
+        <div className="border-t border-[#e5dfb4] px-5 py-5 dark:border-white/10 sm:px-6">
           <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <Paperclip className="h-4 w-4 text-slate-400" />
@@ -356,7 +356,7 @@ export default function TeacherAssignmentPage() {
             <p className="text-xs text-slate-500 dark:text-slate-400">Hələ qoşma fayl yoxdur.</p>
           )}
 
-          <div className="mt-4 border-t border-slate-100 pt-4 dark:border-white/10">
+          <div className="mt-4 border-t border-[#e5dfb4] pt-4 dark:border-white/10">
             <p className="mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">Yeni qoşma əlavə et</p>
             <UploadZone files={staged} onChange={setStaged} maxFiles={10} maxSizeMb={50} />
             {staged.length > 0 && (
@@ -396,7 +396,7 @@ export default function TeacherAssignmentPage() {
       </div>
 
       <Card className="mt-5 overflow-hidden">
-        <div className="border-b border-slate-100 px-5 py-4 dark:border-white/10 sm:px-6">
+        <div className="border-b border-[#e5dfb4] px-5 py-4 dark:border-white/10 sm:px-6">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
               <h2 className="font-display text-base font-bold text-slate-900 dark:text-white">Təhvil cədvəli</h2>
@@ -508,7 +508,7 @@ export default function TeacherAssignmentPage() {
               </table>
             </div>
 
-            <ul className="divide-y divide-slate-100 dark:divide-white/[0.06] md:hidden">
+            <ul className="divide-y divide-[#e5dfb4] dark:divide-white/[0.06] md:hidden">
               {filteredRows.map((row) => (
                 <li key={row.studentId} className="p-4">
                   <div className="flex items-start gap-3">
@@ -610,7 +610,7 @@ export default function TeacherAssignmentPage() {
           </Alert>
         ) : (
           <div className="space-y-4">
-            <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl bg-slate-50 p-3.5 dark:bg-white/[0.04]">
+            <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl bg-[#efeada] p-3.5 dark:bg-white/[0.04]">
               <div>
                 <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Tapşırıq</p>
                 <p className="text-sm font-semibold text-slate-800 dark:text-slate-100">{submissionDetail.data.assignmentTitle}</p>
@@ -621,7 +621,7 @@ export default function TeacherAssignmentPage() {
             {submissionDetail.data.comment && (
               <div>
                 <p className="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-400">Tələbənin qeydi</p>
-                <p className="whitespace-pre-wrap rounded-xl bg-slate-50 p-3 text-sm leading-6 text-slate-700 dark:bg-white/[0.03] dark:text-slate-300">
+                <p className="whitespace-pre-wrap rounded-xl bg-[#efeada] p-3 text-sm leading-6 text-slate-700 dark:bg-white/[0.03] dark:text-slate-300">
                   {submissionDetail.data.comment}
                 </p>
               </div>
@@ -641,7 +641,7 @@ export default function TeacherAssignmentPage() {
               <p className="text-xs text-slate-400">Fayl yüklənməyib.</p>
             )}
 
-            <div className="grid gap-4 border-t border-slate-100 pt-4 dark:border-white/10 sm:grid-cols-[140px_1fr]">
+            <div className="grid gap-4 border-t border-[#e5dfb4] pt-4 dark:border-white/10 sm:grid-cols-[140px_1fr]">
               <Field label="Bal" htmlFor="grade-score" hint={maxScore ? `Maksimum: ${maxScore}` : undefined}>
                 <Input
                   id="grade-score"

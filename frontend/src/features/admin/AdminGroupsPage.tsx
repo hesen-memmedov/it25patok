@@ -173,7 +173,7 @@ export default function AdminGroupsPage() {
             </thead>
             <tbody>
               {groups?.map((g) => (
-                <tr key={g.id} className="bg-white dark:bg-black/30 dark:bg-black/30 border-b border-slate-200 dark:border-white/10">
+                <tr key={g.id} className="bg-white dark:bg-black/30 dark:bg-black/30 border-b border-[#ddd6a8] dark:border-white/10">
                   <td className="text-xs font-medium text-slate-600 dark:text-slate-300">{g.code}</td>
                   <td className="text-xs text-slate-600 dark:text-slate-300">{g.name}</td>
                   <td className="text-xs text-slate-600 dark:text-slate-300">{g.studentCount} {t('admin.students')}</td>

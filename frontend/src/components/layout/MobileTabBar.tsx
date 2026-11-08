@@ -23,7 +23,7 @@ export function MobileTabBar() {
   return (
     <>
       <nav
-        className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200/80 bg-white/90 backdrop-blur-xl dark:border-white/10 dark:bg-[#0b1020]/92 md:hidden"
+        className="fixed inset-x-0 bottom-0 z-40 border-t border-[#ddd6a8]/80 bg-[#f7f4e0]/92 backdrop-blur-xl dark:border-white/10 dark:bg-[#1a0e12]/92 md:hidden"
         style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
         aria-label="Mobil menyu"
       >
@@ -95,7 +95,7 @@ export function MobileTabBar() {
               key={item.to}
               to={item.to}
               onClick={() => setMoreOpen(false)}
-              className="flex min-h-[76px] flex-col items-start justify-between rounded-2xl border border-slate-200 bg-slate-50/70 p-3.5 text-slate-700 transition active:scale-[0.98] dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-200"
+              className="flex min-h-[76px] flex-col items-start justify-between rounded-2xl border border-[#ddd6a8] bg-[#efeada]/70 p-3.5 text-slate-700 transition active:scale-[0.98] dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-200"
             >
               <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-white text-primary-600 shadow-sm dark:bg-white/10 dark:text-primary-300">
                 <item.icon className="h-[18px] w-[18px]" />

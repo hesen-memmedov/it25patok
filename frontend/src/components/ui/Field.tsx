@@ -9,7 +9,7 @@ import {
 import { cn } from '@/lib/utils'
 
 const fieldBase =
-  'w-full rounded-xl border bg-white text-sm text-slate-900 shadow-sm transition placeholder:text-slate-400 focus:border-primary-400 focus:outline-none focus:ring-4 focus:ring-primary-500/10 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-500 dark:bg-white/5 dark:text-white dark:placeholder:text-slate-500 dark:disabled:bg-white/[0.03] dark:disabled:text-slate-500'
+  'w-full rounded-xl border bg-white text-sm text-slate-900 shadow-sm transition placeholder:text-slate-400 focus:border-primary-400 focus:outline-none focus:ring-4 focus:ring-primary-500/10 disabled:cursor-not-allowed disabled:bg-[#efeada] disabled:text-slate-500 dark:bg-white/5 dark:text-white dark:placeholder:text-slate-500 dark:disabled:bg-white/[0.03] dark:disabled:text-slate-500'
 
 interface FieldProps {
   label?: ReactNode
@@ -66,7 +66,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
           rightIcon && 'pr-10',
           invalid
             ? 'border-rose-400 focus:border-rose-500 focus:ring-rose-500/10 dark:border-rose-500/60'
-            : 'border-slate-200 dark:border-white/10',
+            : 'border-[#ddd6a8] dark:border-white/10',
           className,
         )}
         aria-invalid={invalid || undefined}
@@ -95,7 +95,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
         'min-h-[108px] resize-y px-3.5 py-3 leading-6',
         invalid
           ? 'border-rose-400 focus:border-rose-500 focus:ring-rose-500/10 dark:border-rose-500/60'
-          : 'border-slate-200 dark:border-white/10',
+          : 'border-[#ddd6a8] dark:border-white/10',
         className,
       )}
       aria-invalid={invalid || undefined}
@@ -121,7 +121,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select
         'bg-[url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20fill%3D%27none%27%20viewBox%3D%270%200%2020%2020%27%3E%3Cpath%20stroke%3D%27%2364748b%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20stroke-width%3D%271.5%27%20d%3D%27m6%208%204%204%204-4%27/%3E%3C/svg%3E")]',
         invalid
           ? 'border-rose-400 focus:border-rose-500 focus:ring-rose-500/10 dark:border-rose-500/60'
-          : 'border-slate-200 dark:border-white/10',
+          : 'border-[#ddd6a8] dark:border-white/10',
         className,
       )}
       aria-invalid={invalid || undefined}
@@ -141,7 +141,7 @@ export function Checkbox({
     <label className={cn('flex cursor-pointer items-start gap-2.5 text-sm text-slate-700 dark:text-slate-300', className)}>
       <input
         type="checkbox"
-        className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-slate-300 text-primary-600 focus:ring-primary-500 dark:border-white/20 dark:bg-white/10"
+        className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-[#cfc799] text-primary-600 focus:ring-primary-500 dark:border-white/20 dark:bg-white/10"
         {...rest}
       />
       <span>{label}</span>

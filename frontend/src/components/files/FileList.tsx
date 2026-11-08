@@ -22,7 +22,7 @@ export function FileList({ files, onView, onRemove, removingId, compact, classNa
       {files.map((file, index) => (
         <li
           key={file.id}
-          className="group flex items-center gap-3 rounded-xl border border-slate-200/80 bg-white p-2.5 transition hover:border-primary-200 hover:shadow-sm dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-primary-400/30"
+          className="group flex items-center gap-3 rounded-xl border border-[#ddd6a8]/80 bg-white p-2.5 transition hover:border-primary-200 hover:shadow-sm dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-primary-400/30"
         >
           <button
             type="button"

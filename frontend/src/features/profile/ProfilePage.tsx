@@ -300,13 +300,13 @@ export default function ProfilePage() {
     <Container className="min-h-screen py-4">
       <Row className="g-4">
         {/* Left sidebar with user info and settings */}
-        <Col md={3} className="border-end border-slate-200 dark:border-white/10 h-fit p-4 flex flex-col">
+        <Col md={3} className="border-end border-[#ddd6a8] dark:border-white/10 h-fit p-4 flex flex-col">
           {/* User avatar */}
           <div className="mb-4 text-center">
             <AuthenticatedImage
               fileId={user.avatarFileId}
               alt={displayName}
-              className="w-32 h-32 mx-auto rounded-full object-cover border border-slate-200 dark:border-white/10"
+              className="w-32 h-32 mx-auto rounded-full object-cover border border-[#ddd6a8] dark:border-white/10"
             />
             <Button
               variant="ghost"
@@ -343,7 +343,7 @@ export default function ProfilePage() {
               onChange={(e) => setBio(e.target.value)}
               placeholder={t('profile.bio_placeholder')}
               className={cn(
-                'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+                'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
                 'text-sm',
                 'resize-none',
               )}
@@ -411,7 +411,7 @@ export default function ProfilePage() {
                     onChange={(e) => setNewEmail(e.target.value)}
                     placeholder={t('profile.new_email')}
                     className={cn(
-                      'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+                      'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
                       'text-sm',
                     )}
                   />
@@ -441,7 +441,7 @@ export default function ProfilePage() {
                     onChange={(e) => setEmailChangeCode(e.target.value)}
                     placeholder={t('profile.otp_code')}
                     className={cn(
-                      'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+                      'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
                       'text-sm',
                     )}
                   />
@@ -481,7 +481,7 @@ export default function ProfilePage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className={cn(
-                  'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+                  'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
                   'text-sm',
                   'mb-2',
                 )}
@@ -492,7 +492,7 @@ export default function ProfilePage() {
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}
                 className={cn(
-                  'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+                  'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
                   'text-sm',
                   'mb-2',
                 )}
@@ -503,7 +503,7 @@ export default function ProfilePage() {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 className={cn(
-                  'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+                  'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
                   'text-sm',
                 )}
               />
@@ -543,7 +543,7 @@ export default function ProfilePage() {
           {/* Account info cards */}
           <Row className="g-4 mb-4">
             <Col sm={6}>
-              <div className="p-3 rounded-lg bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10">
+              <div className="p-3 rounded-lg bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10">
                 <h3 className="text-sm font-medium text-slate-600 dark:text-slate-300">{t('profile.account_joined')}</h3>
                 <p className="text-xs text-slate-500 dark:text-slate-400">
                   {new Date(user.createdAt).toLocaleDateString('az-AZ')}
@@ -551,7 +551,7 @@ export default function ProfilePage() {
               </div>
             </Col>
             <Col sm={6}>
-              <div className="p-3 rounded-lg bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10">
+              <div className="p-3 rounded-lg bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10">
                 <h3 className="text-sm font-medium text-slate-600 dark:text-slate-300">{t('profile.last_login')}</h3>
                 <p className="text-xs text-slate-500 dark:text-slate-400">
                   {user.lastLoginAt ? new Date(user.lastLoginAt).toLocaleString('az-AZ') : t('profile.never')}
@@ -561,7 +561,7 @@ export default function ProfilePage() {
           </Row>
 
           {/* Recent activity / summary */}
-          <div className="rounded-lg bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 p-4">
+          <div className="rounded-lg bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 p-4">
             <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">{t('profile.account_settings')}</h3>
             <div className="space-y-3">
               {/* Bio editor */}
@@ -573,7 +573,7 @@ export default function ProfilePage() {
                   onChange={(e) => setBio(e.target.value)}
                   placeholder={t('profile.enter_bio')}
                   className={cn(
-                    'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+                    'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
                     'text-sm',
                     'resize-none',
                   )}
@@ -586,7 +586,7 @@ export default function ProfilePage() {
           </div>
 
           {/* Action buttons */}
-          <div className="mt-4 pt-4 border-t border-slate-200 dark:border-white/10">
+          <div className="mt-4 pt-4 border-t border-[#ddd6a8] dark:border-white/10">
             <h3 className="text-sm font-medium text-slate-600 dark:text-slate-300 mb-3">{t('profile.actions')}</h3>
 
             <Button

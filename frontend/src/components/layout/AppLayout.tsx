@@ -14,10 +14,10 @@ function ScrollToTop() {
 
 export function AppLayout() {
   return (
-    <div className="min-h-dvh bg-slate-50/80 dark:bg-[#0b1020]">
+    <div className="min-h-dvh bg-[#ebe6b0]/80 dark:bg-[#1a0e12]">
       <div
         aria-hidden
-        className="pointer-events-none fixed inset-x-0 top-0 -z-0 h-[420px] bg-[radial-gradient(ellipse_at_top_right,rgba(99,102,241,0.10),transparent_55%),radial-gradient(ellipse_at_top_left,rgba(139,92,246,0.07),transparent_50%)] dark:bg-[radial-gradient(ellipse_at_top_right,rgba(99,102,241,0.14),transparent_55%),radial-gradient(ellipse_at_top_left,rgba(139,92,246,0.08),transparent_50%)]"
+        className="pointer-events-none fixed inset-x-0 top-0 -z-0 h-[420px] bg-[radial-gradient(ellipse_at_top_right,rgba(145,10,53,0.14),transparent_55%),radial-gradient(ellipse_at_top_left,rgba(145,10,53,0.10),transparent_50%)] dark:bg-[radial-gradient(ellipse_at_top_right,rgba(180,29,77,0.22),transparent_55%),radial-gradient(ellipse_at_top_left,rgba(145,10,53,0.16),transparent_50%)]"
       />
       <ScrollToTop />
       <Sidebar />

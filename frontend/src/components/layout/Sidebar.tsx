@@ -31,7 +31,7 @@ export function Sidebar() {
   }
 
   return (
-    <aside className="fixed inset-y-0 left-0 z-40 hidden w-[76px] flex-col border-r border-slate-200/70 bg-white/85 backdrop-blur-xl dark:border-white/[0.08] dark:bg-[#0b1020]/90 md:flex lg:w-[260px]">
+    <aside className="fixed inset-y-0 left-0 z-40 hidden w-[76px] flex-col border-r border-[#ddd6a8]/70 bg-[#f7f4e0]/88 backdrop-blur-xl dark:border-white/[0.08] dark:bg-[#1a0e12]/92 md:flex lg:w-[260px]">
       <div className="flex h-[68px] shrink-0 items-center px-4 lg:px-5">
         <div className="lg:hidden">
           <LogoMark />
@@ -62,7 +62,7 @@ export function Sidebar() {
                   'group relative flex h-11 items-center gap-3 rounded-xl px-3 text-sm font-semibold transition-all lg:px-3.5',
                   isActive
                     ? 'bg-gradient-to-r from-primary-600 to-violet-600 text-white shadow-soft'
-                    : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-white/[0.07] dark:hover:text-white',
+                    : 'text-slate-600 hover:bg-[#e8e4c8] hover:text-slate-900 dark:text-slate-400 dark:hover:bg-white/[0.07] dark:hover:text-white',
                 )
               }
             >
@@ -89,10 +89,10 @@ export function Sidebar() {
         })}
       </nav>
 
-      <div className="shrink-0 border-t border-slate-200/70 p-2.5 dark:border-white/[0.08] lg:p-3">
+      <div className="shrink-0 border-t border-[#ddd6a8]/70 p-2.5 dark:border-white/[0.08] lg:p-3">
         <NavLink
           to="/profile"
-          className="flex items-center gap-2.5 rounded-xl p-1.5 transition hover:bg-slate-100 dark:hover:bg-white/[0.06] lg:p-2"
+          className="flex items-center gap-2.5 rounded-xl p-1.5 transition hover:bg-[#e8e4c8] dark:hover:bg-white/[0.06] lg:p-2"
           title={fullName(user)}
         >
           <Avatar user={user} size="md" />

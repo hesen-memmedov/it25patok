@@ -69,7 +69,7 @@ export function Avatar({
       className={cn(
         'relative inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-primary-500 to-violet-500 font-bold text-white',
         sizeClasses[size],
-        ring && 'ring-2 ring-white shadow-sm dark:ring-[#0b1020]',
+        ring && 'ring-2 ring-[#ebe6b0] shadow-sm dark:ring-[#1a0e12]',
         className,
       )}
       aria-hidden={!avatarId}

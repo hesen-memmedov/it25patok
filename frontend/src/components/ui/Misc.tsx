@@ -68,7 +68,7 @@ export function Progress({
   }
   return (
     <div
-      className={cn('h-2 overflow-hidden rounded-full bg-slate-100 dark:bg-white/10', className)}
+      className={cn('h-2 overflow-hidden rounded-full bg-[#e8e4c8] dark:bg-white/10', className)}
       role="progressbar"
       aria-valuenow={Math.round(value)}
       aria-valuemin={0}
@@ -190,7 +190,7 @@ export function SearchInput({
           value={value}
           onChange={(event) => onChange(event.target.value)}
           placeholder={placeholder}
-          className="h-10 w-full rounded-xl border border-slate-200 bg-white pl-10 pr-9 text-sm text-slate-900 shadow-sm transition placeholder:text-slate-400 focus:border-primary-400 focus:outline-none focus:ring-4 focus:ring-primary-500/10 dark:border-white/10 dark:bg-white/5 dark:text-white"
+          className="h-10 w-full rounded-xl border border-[#ddd6a8] bg-white pl-10 pr-9 text-sm text-slate-900 shadow-sm transition placeholder:text-slate-400 focus:border-primary-400 focus:outline-none focus:ring-4 focus:ring-primary-500/10 dark:border-white/10 dark:bg-white/5 dark:text-white"
           aria-label={placeholder}
         />
       </form>

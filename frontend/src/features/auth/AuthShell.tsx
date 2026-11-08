@@ -24,7 +24,7 @@ export function AuthShell({
   showBack?: boolean
 }) {
   return (
-    <div className="min-h-dvh bg-slate-50 dark:bg-[#0b1020] lg:grid lg:grid-cols-[1.02fr_1fr]">
+    <div className="min-h-dvh bg-[#ebe6b0] dark:bg-[#1a0e12] lg:grid lg:grid-cols-[1.02fr_1fr]">
       <aside className="relative hidden overflow-hidden gradient-bg p-10 text-white lg:flex lg:flex-col xl:p-14">
         <div aria-hidden className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-white/10 blur-2xl" />
         <div aria-hidden className="absolute -bottom-32 -left-20 h-96 w-96 rounded-full bg-violet-900/30 blur-3xl" />

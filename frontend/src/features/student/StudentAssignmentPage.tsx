@@ -168,7 +168,7 @@ export default function StudentAssignmentPage() {
       <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_320px]">
         <div className="min-w-0 space-y-5">
           <Card className="overflow-hidden">
-            <div className="border-b border-slate-100 bg-gradient-to-r from-primary-50/60 via-white to-violet-50/40 px-5 py-5 dark:border-white/10 dark:from-primary-500/[0.07] dark:via-transparent dark:to-violet-500/[0.05] sm:px-6">
+            <div className="border-b border-[#e5dfb4] bg-gradient-to-r from-primary-50/60 via-white to-violet-50/40 px-5 py-5 dark:border-white/10 dark:from-primary-500/[0.07] dark:via-transparent dark:to-violet-500/[0.05] sm:px-6">
               <div className="mb-3 flex flex-wrap items-center gap-2">
                 <TypeBadge type={assignment.type} />
                 <Badge tone="outline">{assignment.subjectName}</Badge>
@@ -200,7 +200,7 @@ export default function StudentAssignmentPage() {
             </div>
 
             {detail.attachments.length > 0 && (
-              <div className="border-t border-slate-100 px-5 py-5 dark:border-white/10 sm:px-6">
+              <div className="border-t border-[#e5dfb4] px-5 py-5 dark:border-white/10 sm:px-6">
                 <div className="mb-3 flex items-center gap-2">
                   <Paperclip className="h-4 w-4 text-slate-400" />
                   <h2 className="text-[11px] font-bold uppercase tracking-[0.16em] text-slate-400">
@@ -216,7 +216,7 @@ export default function StudentAssignmentPage() {
           </Card>
 
           <Card className="overflow-hidden">
-            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 px-5 py-4 dark:border-white/10 sm:px-6">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#e5dfb4] px-5 py-4 dark:border-white/10 sm:px-6">
               <div>
                 <h2 className="font-display text-base font-bold text-slate-900 dark:text-white">Mənim təhvilim</h2>
                 <p className="text-xs text-slate-500 dark:text-slate-400">
@@ -265,7 +265,7 @@ export default function StudentAssignmentPage() {
               )}
 
               {submission?.teacherFeedback && (
-                <div className="rounded-xl border border-slate-200 bg-slate-50/70 p-4 dark:border-white/10 dark:bg-white/[0.03]">
+                <div className="rounded-xl border border-[#ddd6a8] bg-[#efeada]/70 p-4 dark:border-white/10 dark:bg-white/[0.03]">
                   <p className="mb-1 text-[11px] font-bold uppercase tracking-wider text-slate-400">Müəllimin şərhi</p>
                   <p className="whitespace-pre-wrap text-sm leading-6 text-slate-700 dark:text-slate-300">{submission.teacherFeedback}</p>
                 </div>
@@ -274,7 +274,7 @@ export default function StudentAssignmentPage() {
               {submission?.comment && (
                 <div>
                   <p className="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-400">Təhvil qeydi</p>
-                  <p className="whitespace-pre-wrap rounded-xl bg-slate-50 p-3.5 text-sm leading-6 text-slate-700 dark:bg-white/[0.03] dark:text-slate-300">
+                  <p className="whitespace-pre-wrap rounded-xl bg-[#efeada] p-3.5 text-sm leading-6 text-slate-700 dark:bg-white/[0.03] dark:text-slate-300">
                     {submission.comment}
                   </p>
                 </div>
@@ -295,7 +295,7 @@ export default function StudentAssignmentPage() {
               )}
 
               {!graded && !locked && (
-                <div className="space-y-4 border-t border-slate-100 pt-4 dark:border-white/10">
+                <div className="space-y-4 border-t border-[#e5dfb4] pt-4 dark:border-white/10">
                   <div>
                     <p className="mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">
                       {submission ? 'Yeni fayl əlavə et' : 'Fayl yüklə'}
@@ -396,7 +396,7 @@ export default function StudentAssignmentPage() {
                 </span>
               </div>
             </div>
-            <div className="mt-4 border-t border-slate-100 pt-4 dark:border-white/10">
+            <div className="mt-4 border-t border-[#e5dfb4] pt-4 dark:border-white/10">
               <div className="flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
                 <span>Tamamlanma</span>
                 <span className="font-semibold">{progressValue}%</span>

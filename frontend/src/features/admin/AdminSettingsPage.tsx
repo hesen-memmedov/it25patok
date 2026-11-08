@@ -71,13 +71,13 @@ export default function AdminSettingsPage() {
       {/* D1 Mode setting */}
       <Row className="mb-4">
         <Col md={6}>
-          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4">
+          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4">
             <span className="text-sm font-medium text-slate-600 dark:text-slate-300 mb-2">{t('admin.d1_mode')}</span>
             <Input
               value={d1Mode}
               onChange={(e) => setD1Mode(e.target.value as 'local' | 'cloudflare')}
               className={cn(
-                'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+                'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
                 'text-sm',
               )}
               readOnly
@@ -89,14 +89,14 @@ export default function AdminSettingsPage() {
       {/* Daily email time setting */}
       <Row className="mb-4">
         <Col md={6}>
-          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4">
+          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4">
             <span className="text-sm font-medium text-slate-600 dark:text-slate-300 mb-2">{t('admin.daily_email_time')}</span>
             <Input
               type="time"
               value={dailyEmailTime}
               onChange={(e) => setDailyEmailTime(e.target.value)}
               className={cn(
-                'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+                'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
                 'text-sm',
               )}
             />
@@ -110,7 +110,7 @@ export default function AdminSettingsPage() {
       {/* SMTP settings */}
       <Row className="mb-4">
         <Col md={6}>
-          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4">
+          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4">
             <span className="text-sm font-medium text-slate-600 dark:text-slate-300 mb-2">{t('admin.smtp_host')}</span>
             <Input
               type="text"
@@ -118,14 +118,14 @@ export default function AdminSettingsPage() {
               onChange={(e) => setSmtpHost(e.target.value)}
               placeholder={t('admin.smtp_host_placeholder')}
               className={cn(
-                'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+                'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
                 'text-sm',
               )}
             />
           </div>
         </Col>
         <Col md={6}>
-          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4">
+          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4">
             <span className="text-sm font-medium text-slate-600 dark:text-slate-300 mb-2">{t('admin.smtp_port')}</span>
             <Input
               type="number"
@@ -133,7 +133,7 @@ export default function AdminSettingsPage() {
               onChange={(e) => setSmtpPort(Number(e.target.value) || null)}
               placeholder={t('admin.smtp_port_placeholder')}
               className={cn(
-                'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+                'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
                 'text-sm',
               )}
             />
@@ -143,7 +143,7 @@ export default function AdminSettingsPage() {
 
       <Row className="mb-4">
         <Col md={6}>
-          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4">
+          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4">
             <span className="text-sm font-medium text-slate-600 dark:text-slate-300 mb-2">{t('admin.smtp_user')}</span>
             <Input
               type="text"
@@ -151,14 +151,14 @@ export default function AdminSettingsPage() {
               onChange={(e) => setSmtpUser(e.target.value)}
               placeholder={t('admin.smtp_user_placeholder')}
               className={cn(
-                'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+                'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
                 'text-sm',
               )}
             />
           </div>
         </Col>
         <Col md={6}>
-          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4">
+          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4">
             <span className="text-sm font-medium text-slate-600 dark:text-slate-300 mb-2">{t('admin.smtp_password')}</span>
             <Input
               type="password"
@@ -166,7 +166,7 @@ export default function AdminSettingsPage() {
               onChange={(e) => setSmtpPassword(e.target.value)}
               placeholder={t('admin.smtp_password_placeholder')}
               className={cn(
-                'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+                'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
                 'text-sm',
               )}
             />

@@ -129,7 +129,7 @@ export default function LoginPage() {
         </p>
 
         {import.meta.env.DEV && (
-          <div className="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-3 text-[11px] leading-5 text-slate-500 dark:border-white/15 dark:bg-white/[0.03] dark:text-slate-400">
+          <div className="rounded-xl border border-dashed border-[#cfc799] bg-[#efeada] p-3 text-[11px] leading-5 text-slate-500 dark:border-white/15 dark:bg-white/[0.03] dark:text-slate-400">
             <span className="font-semibold text-slate-700 dark:text-slate-200">Lokal test hesabı:</span>{' '}
             admin / Admin123!IT25
           </div>

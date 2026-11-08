@@ -266,11 +266,11 @@ function ArchivePreview({ file, token }: { file: FileDto; token: string }) {
   if (!entries) return <ViewerLoader label="Arxiv siyahısı hazırlanır…" />
   return (
     <div className="h-full w-full overflow-auto rounded-xl bg-white dark:bg-[#0f172a]">
-      <div className="sticky top-0 flex items-center justify-between border-b border-slate-200 bg-white/95 px-4 py-2.5 text-xs font-semibold text-slate-500 backdrop-blur dark:border-white/10 dark:bg-[#0f172a]/95 dark:text-slate-400">
+      <div className="sticky top-0 flex items-center justify-between border-b border-[#ddd6a8] bg-white/95 px-4 py-2.5 text-xs font-semibold text-slate-500 backdrop-blur dark:border-white/10 dark:bg-[#0f172a]/95 dark:text-slate-400">
         <span>{entries.length} element</span>
         <span>Arxiv siyahısı</span>
       </div>
-      <ul className="divide-y divide-slate-100 dark:divide-white/[0.06]">
+      <ul className="divide-y divide-[#e5dfb4] dark:divide-white/[0.06]">
         {entries.map((entry) => (
           <li key={entry.name} className="flex items-center gap-3 px-4 py-2.5">
             <span className="min-w-0 flex-1 truncate text-sm text-slate-700 dark:text-slate-200">

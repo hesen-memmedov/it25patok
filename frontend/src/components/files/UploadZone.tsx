@@ -67,7 +67,7 @@ export function UploadZone({
           'flex cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed px-5 py-8 text-center transition',
           isDragActive
             ? 'border-primary-400 bg-primary-50/70 dark:border-primary-400 dark:bg-primary-500/10'
-            : 'border-slate-300 bg-slate-50/50 hover:border-primary-300 hover:bg-primary-50/40 dark:border-white/15 dark:bg-white/[0.025] dark:hover:border-primary-400/40 dark:hover:bg-primary-500/5',
+            : 'border-[#cfc799] bg-[#efeada]/50 hover:border-primary-300 hover:bg-primary-50/40 dark:border-white/15 dark:bg-white/[0.025] dark:hover:border-primary-400/40 dark:hover:bg-primary-500/5',
           disabled && 'pointer-events-none opacity-50',
         )}
       >
@@ -88,7 +88,7 @@ export function UploadZone({
           {files.map((file, index) => (
             <li
               key={`${file.name}-${file.size}-${index}`}
-              className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-3 py-2.5 dark:border-white/10 dark:bg-white/[0.03]"
+              className="flex items-center gap-3 rounded-xl border border-[#ddd6a8] bg-white px-3 py-2.5 dark:border-white/10 dark:bg-white/[0.03]"
             >
               <FileTypeIcon
                 extension={file.name.split('.').pop()}

@@ -51,7 +51,7 @@ export default function AdminDashboardPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-6">
         {stats && (
           <>
-            <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4 hover:transition-all hover:border-primary-300">
+            <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4 hover:transition-all hover:border-primary-300">
               <div className="flex items-start justify-between">
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{t('admin.students')}</h3>
@@ -62,7 +62,7 @@ export default function AdminDashboardPage() {
                 </Badge>
               </div>
             </div>
-            <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4 hover:transition-all hover:border-primary-300">
+            <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4 hover:transition-all hover:border-primary-300">
               <div className="flex items-start justify-between">
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{t('admin.teachers')}</h3>
@@ -73,7 +73,7 @@ export default function AdminDashboardPage() {
                 </Badge>
               </div>
             </div>
-            <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4 hover:transition-all hover:border-primary-300">
+            <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4 hover:transition-all hover:border-primary-300">
               <div className="flex items-start justify-between">
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{t('admin.admins')}</h3>
@@ -84,7 +84,7 @@ export default function AdminDashboardPage() {
                 </Badge>
               </div>
             </div>
-            <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4 hover:transition-all hover:border-primary-300">
+            <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4 hover:transition-all hover:border-primary-300">
               <div className="flex items-start justify-between">
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{t('admin.assignments')}</h3>
@@ -95,7 +95,7 @@ export default function AdminDashboardPage() {
                 </Badge>
               </div>
             </div>
-            <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4 hover:transition-all hover:border-primary-300">
+            <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4 hover:transition-all hover:border-primary-300">
               <div className="flex items-start justify-between">
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{t('admin.submissions')}</h3>
@@ -106,7 +106,7 @@ export default function AdminDashboardPage() {
                 </Badge>
               </div>
             </div>
-            <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4 hover:transition-all hover:border-primary-300">
+            <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4 hover:transition-all hover:border-primary-300">
               <div className="flex items-start justify-between">
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{t('admin.files')}</h3>
@@ -117,7 +117,7 @@ export default function AdminDashboardPage() {
                 </Badge>
               </div>
             </div>
-            <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4 hover:transition-all hover:border-primary-300">
+            <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4 hover:transition-all hover:border-primary-300">
               <div className="flex items-start justify-between">
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{t('admin.storage')}</h3>
@@ -135,19 +135,19 @@ export default function AdminDashboardPage() {
       {/* Summary cards */}
       {summary && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4">
+          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4">
             <h4 className="text-sm font-medium text-slate-600 dark:text-slate-300 mb-2">{t('admin.recent_activity')}</h4>
             <p className="text-2xl font-bold text-slate-900 dark:text-white">{summary.users} {t('admin.users')}</p>
           </div>
-          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4">
+          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4">
             <h4 className="text-sm font-medium text-slate-600 dark:text-slate-300 mb-2">{t('admin.assignments')}</h4>
             <p className="text-2xl font-bold text-slate-900 dark:text-white">{summary.assignments} {t('admin.assignments_plural')}</p>
           </div>
-          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4">
+          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4">
             <h4 className="text-sm font-medium text-slate-600 dark:text-slate-300 mb-2">{t('admin.missing')}</h4>
             <p className="text-2xl font-bold text-slate-900 dark:text-white">{summary.missing} {t('admin.missing_items')}</p>
           </div>
-          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4">
+          <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4">
             <h4 className="text-sm font-medium text-slate-600 dark:text-slate-300 mb-2">{t('admin.chat_messages')}</h4>
             <p className="text-2xl font-bold text-slate-900 dark:text-white">{summary.chatMessages} {t('admin.messages')}</p>
           </div>
@@ -155,7 +155,7 @@ export default function AdminDashboardPage() {
       )}
 
       {/* Recent audit log */}
-      <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-slate-200 dark:border-white/10 rounded-lg p-4">
+      <div className="bg-white dark:bg-black/30 dark:bg-black/30 border border-[#ddd6a8] dark:border-white/10 rounded-lg p-4">
         <h4 className="text-sm font-medium text-slate-600 dark:text-slate-300 mb-3">{t('admin.recent_audit')}</h4>
         {summary && summary.recentAudit?.length > 0 ? (
           <div className="space-y-2 max-h-80 overflow-y-auto">

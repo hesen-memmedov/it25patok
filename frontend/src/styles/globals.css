@@ -8,22 +8,22 @@
   }
 
   body {
-    @apply bg-slate-50 text-slate-900 antialiased dark:bg-[#0b1020] dark:text-slate-100;
+    @apply bg-[#ebe6b0] text-[#2b2320] antialiased dark:bg-[#1a0e12] dark:text-[#f2ead9];
     font-feature-settings: 'cv11', 'ss01';
     min-height: 100dvh;
   }
 
   ::selection {
-    @apply bg-primary/25 text-slate-900 dark:text-white;
+    @apply bg-primary/25 text-[#2b2320] dark:text-[#f6e6e9];
   }
 
   :focus-visible {
-    @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-slate-50 dark:ring-offset-[#0b1020];
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-[#ebe6b0] dark:ring-offset-[#1a0e12];
   }
 
   * {
     scrollbar-width: thin;
-    scrollbar-color: rgb(148 163 184 / 0.5) transparent;
+    scrollbar-color: rgb(120 110 80 / 0.5) transparent;
   }
 
   *::-webkit-scrollbar {
@@ -32,7 +32,7 @@
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: rgb(148 163 184 / 0.45);
+    background-color: rgb(120 110 80 / 0.45);
     border-radius: 999px;
   }
 
@@ -47,19 +47,19 @@
 
 @layer components {
   .surface {
-    @apply rounded-2xl border border-slate-200/80 bg-white shadow-sm dark:border-white/10 dark:bg-white/[0.045];
+    @apply rounded-2xl border border-[#ddd6a8]/80 bg-[#faf8ea] shadow-sm dark:border-white/10 dark:bg-white/[0.045];
   }
 
   .glass {
-    @apply border border-white/60 bg-white/75 backdrop-blur-xl dark:border-white/10 dark:bg-[#0b1020]/80;
+    @apply border border-[#f0ead0]/70 bg-[#f7f4e0]/80 backdrop-blur-xl dark:border-white/10 dark:bg-[#1a0e12]/80;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 via-violet-600 to-primary-500 bg-clip-text text-transparent dark:from-primary-300 dark:via-violet-300 dark:to-primary-200;
+    @apply bg-gradient-to-r from-primary-600 via-violet-600 to-primary-500 bg-clip-text text-transparent dark:from-primary-200 dark:via-violet-300 dark:to-primary-100;
   }
 
   .gradient-bg {
-    background-image: linear-gradient(135deg, #6366f1 0%, #8b5cf6 55%, #a855f7 100%);
+    background-image: linear-gradient(135deg, #b41d4d 0%, #910a35 52%, #4c0620 100%);
   }
 
   .page-container {
@@ -67,15 +67,15 @@
   }
 
   .table-wrap {
-    @apply overflow-x-auto rounded-2xl border border-slate-200/80 dark:border-white/10;
+    @apply overflow-x-auto rounded-2xl border border-[#ddd6a8]/80 dark:border-white/10;
   }
 
   .table {
-    @apply min-w-full divide-y divide-slate-200 text-sm dark:divide-white/10;
+    @apply min-w-full divide-y divide-[#e2dcb4] text-sm dark:divide-white/10;
   }
 
   .table thead {
-    @apply bg-slate-50/80 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:bg-white/[0.04] dark:text-slate-400;
+    @apply bg-[#f2efdb]/80 text-left text-xs font-semibold uppercase tracking-wide text-[#5c5540] dark:bg-white/[0.04] dark:text-slate-400;
   }
 
   .table th {
@@ -91,7 +91,7 @@
   }
 
   .table tbody tr {
-    @apply bg-white transition-colors hover:bg-slate-50/70 dark:bg-transparent dark:hover:bg-white/[0.035];
+    @apply bg-[#fbf9ec] transition-colors hover:bg-[#f6f3df] dark:bg-transparent dark:hover:bg-white/[0.035];
   }
 
   .rich-text {
@@ -196,7 +196,7 @@
   }
 
   .skeleton {
-    @apply animate-shimmer rounded-lg bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-[length:500px_100%] dark:from-white/10 dark:via-white/[0.06] dark:to-white/10;
+    @apply animate-shimmer rounded-lg bg-gradient-to-r from-[#e7e2bd] via-[#f4f1d6] to-[#e7e2bd] bg-[length:500px_100%] dark:from-white/10 dark:via-white/[0.06] dark:to-white/10;
   }
 }
 

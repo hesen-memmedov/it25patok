@@ -157,7 +157,7 @@ export default function OtpPage() {
                 maxLength={1}
                 pattern="\d*"
                 aria-label={`Kod rəqəmi ${index + 1}`}
-                className="h-14 w-full rounded-xl border border-slate-200 bg-white text-center text-xl font-bold text-slate-900 shadow-sm transition focus:border-primary-400 focus:outline-none focus:ring-4 focus:ring-primary-500/15 dark:border-white/10 dark:bg-white/5 dark:text-white"
+                className="h-14 w-full rounded-xl border border-[#ddd6a8] bg-white text-center text-xl font-bold text-slate-900 shadow-sm transition focus:border-primary-400 focus:outline-none focus:ring-4 focus:ring-primary-500/15 dark:border-white/10 dark:bg-white/5 dark:text-white"
               />
             ))}
           </div>

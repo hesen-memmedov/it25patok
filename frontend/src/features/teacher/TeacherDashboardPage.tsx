@@ -217,7 +217,7 @@ export default function TeacherDashboardPage() {
 
         <aside className="min-w-0 space-y-4">
           <Card className="overflow-hidden">
-            <div className="flex items-center justify-between gap-2 border-b border-slate-100 px-5 py-4 dark:border-white/10">
+            <div className="flex items-center justify-between gap-2 border-b border-[#e5dfb4] px-5 py-4 dark:border-white/10">
               <div>
                 <h2 className="font-display text-base font-bold text-slate-900 dark:text-white">Borclu tələbələr</h2>
                 <p className="text-xs text-slate-500 dark:text-slate-400">Ən çox təhvil verməyənlər</p>
@@ -231,11 +231,11 @@ export default function TeacherDashboardPage() {
                 {Array.from({ length: 4 }).map((_, index) => <Skeleton key={index} className="h-12 w-full" />)}
               </div>
             ) : topMissing.length ? (
-              <ul className="divide-y divide-slate-100 dark:divide-white/[0.06]">
+              <ul className="divide-y divide-[#e5dfb4] dark:divide-white/[0.06]">
                 {topMissing.map((student, index) => (
                   <li key={student.studentId} className="px-5 py-3">
                     <div className="flex items-center gap-3">
-                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-[11px] font-bold text-slate-500 dark:bg-white/10 dark:text-slate-300">
+                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#e8e4c8] text-[11px] font-bold text-slate-500 dark:bg-white/10 dark:text-slate-300">
                         {index + 1}
                       </span>
                       <div className="min-w-0 flex-1">
@@ -265,7 +265,7 @@ export default function TeacherDashboardPage() {
             <div className="mt-3 space-y-2">
               {data?.groups.length ? (
                 data.groups.map((group) => (
-                  <div key={group.id} className="flex items-center justify-between rounded-xl bg-slate-50 px-3 py-2.5 dark:bg-white/[0.04]">
+                  <div key={group.id} className="flex items-center justify-between rounded-xl bg-[#efeada] px-3 py-2.5 dark:bg-white/[0.04]">
                     <span className="text-sm font-semibold text-slate-700 dark:text-slate-200">{group.name}</span>
                     <Badge tone="default">{group.studentCount} tələbə</Badge>
                   </div>

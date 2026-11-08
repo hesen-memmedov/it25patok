@@ -219,7 +219,7 @@ export default function AdminSubjectsPage() {
             </thead>
             <tbody>
               {subjects?.map((s) => (
-                <tr key={s.id} className="bg-white dark:bg-black/30 dark:bg-black/30 border-b border-slate-200 dark:border-white/10">
+                <tr key={s.id} className="bg-white dark:bg-black/30 dark:bg-black/30 border-b border-[#ddd6a8] dark:border-white/10">
                   <td className="text-xs text-slate-600 dark:text-slate-300">{s.name}</td>
                   <td className="text-xs font-medium text-slate-600 dark:text-slate-300">{s.code || t('admin.none')}</td>
                   <td className="text-xs text-slate-600 dark:text-slate-300 s-break-all">{s.description || t('admin.none')}</td>
@@ -316,7 +316,7 @@ export default function AdminSubjectsPage() {
                       className={`rounded-xl border px-3 py-2 text-xs font-semibold transition ${
                         checked
                           ? 'border-primary-400 bg-primary-50 text-primary-700 ring-2 ring-primary-500/15 dark:border-primary-400/50 dark:bg-primary-500/15 dark:text-primary-200'
-                          : 'border-slate-200 bg-white text-slate-600 hover:border-primary-200 dark:border-white/10 dark:bg-white/[0.03] dark:text-slate-300 dark:hover:border-white/20'
+                          : 'border-[#ddd6a8] bg-white text-slate-600 hover:border-primary-200 dark:border-white/10 dark:bg-white/[0.03] dark:text-slate-300 dark:hover:border-white/20'
                       }`}
                     >
                       {group.code}

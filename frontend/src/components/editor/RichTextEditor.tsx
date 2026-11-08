@@ -38,7 +38,7 @@ function ToolbarButton({
       disabled={disabled}
       onClick={onClick}
       className={cn(
-        'flex h-8 w-8 items-center justify-center rounded-lg text-slate-500 transition hover:bg-slate-100 hover:text-slate-900 disabled:opacity-40 dark:text-slate-400 dark:hover:bg-white/10 dark:hover:text-white',
+        'flex h-8 w-8 items-center justify-center rounded-lg text-slate-500 transition hover:bg-[#e8e4c8] hover:text-slate-900 disabled:opacity-40 dark:text-slate-400 dark:hover:bg-white/10 dark:hover:text-white',
         active && 'bg-primary-50 text-primary-700 dark:bg-primary-500/20 dark:text-primary-200',
       )}
     >
@@ -96,8 +96,8 @@ export function RichTextEditor({
   }
 
   return (
-    <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm focus-within:border-primary-400 focus-within:ring-4 focus-within:ring-primary-500/10 dark:border-white/10 dark:bg-white/5">
-      <div className="flex flex-wrap items-center gap-0.5 border-b border-slate-100 bg-slate-50/70 px-2 py-1.5 dark:border-white/10 dark:bg-white/[0.03]">
+    <div className="overflow-hidden rounded-xl border border-[#ddd6a8] bg-white shadow-sm focus-within:border-primary-400 focus-within:ring-4 focus-within:ring-primary-500/10 dark:border-white/10 dark:bg-white/5">
+      <div className="flex flex-wrap items-center gap-0.5 border-b border-[#e5dfb4] bg-[#efeada]/70 px-2 py-1.5 dark:border-white/10 dark:bg-white/[0.03]">
         <ToolbarButton label="Qalın" active={editor.isActive('bold')} onClick={() => editor.chain().focus().toggleBold().run()}>
           <Bold className="h-4 w-4" />
         </ToolbarButton>

@@ -172,7 +172,7 @@ export default function ChatPage() {
   return (
     <Container className="h-screen">
       <div className="flex h-full g-0">
-        <div className="w-full sm:w-1/3 border-end border-slate-200 dark:border-white/10 h-full p-4 flex flex-col">
+        <div className="w-full sm:w-1/3 border-end border-[#ddd6a8] dark:border-white/10 h-full p-4 flex flex-col">
           <h4 className="text-sm font-semibold text-slate-600 dark:text-slate-300 mb-3">{t('chat.rooms')}</h4>
           <div className="mb-3">
             <Button variant="outline" size="sm" onClick={() => setShowCreateRoom(true)}>
@@ -185,7 +185,7 @@ export default function ChatPage() {
               className={cn(
                 'p-3 rounded-md mb-2 cursor-pointer',
                 'bg-white dark:bg-black/30 dark:bg-black/30',
-                'border-b border-slate-200 dark:border-white/10',
+                'border-b border-[#ddd6a8] dark:border-white/10',
                 room.id === roomId && 'bg-primary-500/10 text-primary-300',
               )}
               onClick={() => setRoomId(room.id)}
@@ -206,7 +206,7 @@ export default function ChatPage() {
 
         <div className="w-full sm:w-2/3 h-full p-4 overflow-y-auto flex flex-col">
           {roomId && (
-            <div className="mb-4 border-b border-slate-200 dark:border-white/10 pb-3">
+            <div className="mb-4 border-b border-[#ddd6a8] dark:border-white/10 pb-3">
               <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
                 {rooms.find((r) => r.id === roomId)?.name || t('chat.select_room')}
               </h3>
@@ -243,7 +243,7 @@ export default function ChatPage() {
             ))}
           </div>
 
-          <div className="mt-4 p-3 border-t border-slate-200 dark:border-white/10 flex gap-2">
+          <div className="mt-4 p-3 border-t border-[#ddd6a8] dark:border-white/10 flex gap-2">
             <input
               type="text"
               value={inputValue}
@@ -251,7 +251,7 @@ export default function ChatPage() {
               onKeyDown={handleKeyDown}
               placeholder={t('chat.message_placeholder')}
               className={cn(
-                'flex-1 rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+                'flex-1 rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 bg-white dark:bg-black/30 dark:bg-black/30 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
                 'text-sm',
               )}
               disabled={!isConnected}
@@ -279,7 +279,7 @@ export default function ChatPage() {
                 onChange={(e) => setNewRoomName(e.target.value)}
                 placeholder={t('chat.room_name')}
                 className={cn(
-                  'w-full rounded-lg border border-slate-200 dark:border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+                  'w-full rounded-lg border border-[#ddd6a8] dark:border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
                   'text-sm',
                 )}
               />
