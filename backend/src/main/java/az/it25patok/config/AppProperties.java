@@ -23,7 +23,8 @@ public record AppProperties(
     public record Cors(List<String> allowedOrigins, boolean cookieSecure, String cookieSameSite) {}
     public record Jwt(String secret, long accessTtlMinutes, long refreshTtlDays, String issuer) {}
     public record D1(String mode, String accountId, String databaseId, String apiToken, String localPath, int timeoutSeconds) {}
-    public record Storage(String mode, String localRoot) {}
+    public record Storage(String mode, String localRoot,
+                          String appsScriptUrl, String appsScriptToken) {}
     public record Drive(String rootFolderId, String serviceAccountJson, String serviceAccountFile, String applicationName) {}
     public record Mail(boolean devMode, String devOutbox, String fromName, String fromAddress,
                        String brevoApiKey, long dailyBatchPauseMs) {}

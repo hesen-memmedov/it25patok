@@ -18,7 +18,7 @@ class CryptoServiceTest {
                 new AppProperties.Cors(List.of("http://localhost:5173"), false, "Lax"),
                 new AppProperties.Jwt("test-secret-key-test-secret-key-123456", 15, 7, "it25patok"),
                 new AppProperties.D1("local", null, null, null, "./build/test.db", 20),
-                new AppProperties.Storage("local", "./build/test-files"),
+                new AppProperties.Storage("local", "./build/test-files", null, null),
                 new AppProperties.Drive(null, null, null, "IT25 PATOK"),
                 new AppProperties.Mail(true, "./build/test-outbox", "İT25 PATOK", "no-reply@it25patok.az", null, 1000L),
                 new AppProperties.Otp(5, 5, 60, 5, 15),
