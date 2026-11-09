@@ -17,7 +17,7 @@ type RetriableConfig = InternalAxiosRequestConfig & { _retry?: boolean }
 export const api = axios.create({
   baseURL: API_URL,
   withCredentials: true,
-  timeout: 45_000,
+  timeout: 120_000,
   headers: { 'X-Requested-With': 'XMLHttpRequest' },
 })
 
